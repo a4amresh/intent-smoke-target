@@ -1,1 +1,3 @@
-// Placeholder for smoke test
+export function greet(): string {
+    return 'hello';
+}
