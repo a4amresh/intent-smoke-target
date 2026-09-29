@@ -1,8 +1,14 @@
-import { useState } from 'react'
+import { useState, type ComponentPropsWithoutRef } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+
+export type ButtonProps = ComponentPropsWithoutRef<'button'>
+
+export function Button({ children, ...props }: ButtonProps) {
+  return <button {...props}>{children}</button>
+}
 
 function App() {
   const [count, setCount] = useState(0)
